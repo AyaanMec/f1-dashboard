@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { RaceContext } from '../context/RaceContext';
 import { getSessions } from '../api/openf1';
-import { MIN_YEAR, MAX_YEAR, CURRENT_YEAR, SESSION_TYPE_LABELS } from '../utils/constants';
+import { MIN_YEAR, MAX_YEAR, SESSION_TYPE_LABELS } from '../utils/constants';
 
 const selectStyle = {
   background: '#1a1a1a',

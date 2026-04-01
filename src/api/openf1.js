@@ -6,12 +6,11 @@ async function fetchOpenF1(endpoint, params = {}) {
     if (v !== undefined && v !== null) url.searchParams.set(k, v);
   });
 
-  let delay = 1000;
+  const delays = [1000, 2000, 4000];
   for (let attempt = 0; attempt < 3; attempt++) {
     const res = await fetch(url.toString());
     if (res.status === 429) {
-      await new Promise(r => setTimeout(r, delay));
-      delay *= 2;
+      await new Promise(r => setTimeout(r, delays[attempt]));
       continue;
     }
     if (!res.ok) throw new Error(`OpenF1 ${endpoint} returned ${res.status}`);

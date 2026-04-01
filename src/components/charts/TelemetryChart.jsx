@@ -1,6 +1,6 @@
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
-  Legend, ResponsiveContainer, ReferenceLine,
+  Legend, ResponsiveContainer,
 } from 'recharts';
 import { TELEMETRY_COLORS } from '../../utils/constants';
 
